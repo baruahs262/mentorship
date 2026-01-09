@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Project Mentorship for High-Achieving Students</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --warm-bg: #FFF8F0;
+            --warm-accent: #D97757;
+            --warm-text: #4A3F35;
+            --warm-light: #8B7B6B;
+            --divider: #E8D5C4;
+        }
+
+        body {
+            font-family: 'Crimson Pro', Georgia, serif;
+            color: var(--warm-text);
+            line-height: 1.8;
+            background: var(--warm-bg);
+            font-size: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 30px 40px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            line-height: 1.3;
+            color: var(--warm-text);
+            letter-spacing: -0.5px;
+        }
+
+        .hero .tagline {
+            font-size: 1.3rem;
+            font-weight: 400;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            line-height: 1.7;
+            color: var(--warm-light);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 45px;
+            background: var(--warm-accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+            margin: 10px;
+        }
+
+        .cta-button:hover {
+            background: #C46849;
+            transform: translateY(-2px);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: var(--warm-accent);
+            border: 2px solid var(--warm-accent);
+        }
+
+        .cta-button.secondary:hover {
+            background: var(--warm-accent);
+            color: white;
+        }
+
+        /* Sections */
+        section {
+            padding: 15px 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            font-weight: 600;
+            color: var(--warm-text);
+            letter-spacing: -0.5px;
+        }
+
+        section h3 {
+            font-size: 1.6rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: var(--warm-accent);
+        }
+
+        section p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        section ul {
+            margin: 25px 0 25px 30px;
+            line-height: 2;
+        }
+
+        section ul li {
+            margin-bottom: 12px;
+        }
+
+        strong {
+            color: var(--warm-text);
+            font-weight: 600;
+        }
+
+        /* Divider */
+        .divider {
+            height: 1px;
+            background: var(--divider);
+            margin: 25px auto;
+            max-width: 200px;
+        }
+
+        /* Highlight Box - Simple */
+        .highlight {
+            border-left: 3px solid var(--warm-accent);
+            padding-left: 30px;
+            margin: 35px 0;
+            font-style: italic;
+            color: var(--warm-light);
+        }
+
+        /* Timeline - Minimal */
+        .roadmap-item {
+            margin-bottom: 45px;
+        }
+
+        .roadmap-item h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .roadmap-item ul {
+            margin-left: 30px;
+            color: var(--warm-light);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            text-align: center;
+            padding: 25px 30px;
+            margin-top: 15px;
+        }
+
+        .contact-section h2 {
+            margin-bottom: 40px;
+        }
+
+        .contact-methods {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .contact-box {
+            text-align: center;
+        }
+
+        .contact-box h3 {
+            font-size: 1.1rem;
+            margin: 0 0 10px 0;
+            font-weight: 500;
+            color: var(--warm-light);
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+        }
+
+        .contact-box a {
+            color: var(--warm-accent);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .contact-box a:hover {
+            color: #C46849;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px 30px;
+            color: var(--warm-light);
+            font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Simple List Style */
+        .simple-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 35px;
+            margin: 40px 0;
+        }
+
+        .simple-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--warm-accent);
+            font-weight: 600;
+        }
+
+        .simple-item p {
+            color: var(--warm-light);
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.1rem;
+            }
+
+            section h2 {
+                font-size: 1.8rem;
+            }
+
+            section h3 {
+                font-size: 1.3rem;
+            }
+
+            body {
+                font-size: 18px;
+            }
+
+            .contact-methods {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Subtle fade in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            animation: fadeIn 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>CS Project Mentorship for High-Achieving High School Students</h1>
+            <p class="tagline">1-on-1 weekly mentorship to help students build real, high-impact technical projects that meaningfully strengthen college applications.</p>
+            <div>
+                <a href="#contact" class="cta-button">Get Started</a>
+                <a href="#about" class="cta-button secondary">Learn More</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="divider"></div>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am Shaurya Baruah, a Computer Science & Electrical Engineering student at the <strong>University of Michigan College of Engineering</strong>.</p>
+        
+        <p>I've built multiple real-world projects, including startups, nonprofit initiatives, and production-level software, and I understand both:</p>
+        
+        <ul>
+            <li>How to build technically strong projects</li>
+            <li>How those projects translate into competitive college applications</li>
+        </ul>
+
+        <p>Through my own college application experience and mentoring work, I've seen firsthand that <strong>depth</strong>, <strong>initiative</strong>, and <strong>real-world impact</strong> are what differentiate strong applicants at top schools.</p>
+
+        <p>My mentorship focuses on helping students build work that clearly demonstrates those qualities.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Who This Is For -->
+    <section>
+        <h2>Who This Is For</h2>
+        <ul>
+            <li>High school students interested in <strong>Computer Science, Engineering, or Technology</strong></li>
+            <li>Students who want to <strong>stand out beyond grades and test scores</strong></li>
+            <li>Students who are motivated but <strong>don't know what project to build or how to execute it well</strong></li>
+            <li>Families aiming for <strong>top-tier colleges</strong> where depth and initiative matter</li>
+        </ul>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- What Students Gain -->
+    <section>
+        <h2>What Students Gain</h2>
+        
+        <ul>
+            <li>Personalized, high-quality <strong>project ideas aligned with their interests</strong></li>
+            <li>Guidance to build <strong>real, technically difficult projects</strong> (not tutorials)</li>
+            <li>Weekly accountability and structured progress</li>
+            <li>Experience solving <strong>hard, real-world problems</strong></li>
+            <li>Clear framing of the work for college resumes, application essays, and interviews</li>
+        </ul>
+
+        <div class="highlight">
+            <p>The goal is not to "learn to code," but to <strong>build something real that demonstrates initiative, depth, and ownership</strong>.</p>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- How It Works -->
+    <section>
+        <h2>How the Mentorship Works</h2>
+        
+        <p>Weekly <strong>60-minute 1-on-1 Zoom sessions</strong></p>
+
+        <h3>Projects are:</h3>
+        <ul>
+            <li>Student-owned</li>
+            <li>Not part of any program or competition</li>
+            <li>Fully creditable to the student</li>
+        </ul>
+
+        <h3>Sessions focus on:</h3>
+        <ul>
+            <li>Project design and scoping</li>
+            <li>Technical decision-making</li>
+            <li>Execution and iteration</li>
+            <li>Translating work into application-ready narratives</li>
+        </ul>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Roadmap -->
+    <section>
+        <h2>Typical Roadmap</h2>
+        <p style="color: var(--warm-light); margin-bottom: 40px;">A structured 4-month journey from idea to impact</p>
+
+        <div class="roadmap-item">
+            <h3>Month 1 – Direction & Foundation</h3>
+            <ul>
+                <li>Identify interests and long-term goals</li>
+                <li>Select a strong project idea</li>
+                <li>Scope appropriately (not too small, not unrealistic)</li>
+                <li>Begin core build</li>
+            </ul>
+        </div>
+
+        <div class="roadmap-item">
+            <h3>Month 2 – Deep Build</h3>
+            <ul>
+                <li>Focused development of core functionality</li>
+                <li>Technical depth and problem-solving</li>
+                <li>Iteration and refinement</li>
+            </ul>
+        </div>
+
+        <div class="roadmap-item">
+            <h3>Month 3 – Polish & Impact</h3>
+            <ul>
+                <li>Improve reliability, usability, and performance</li>
+                <li>Introduce real users or real-world use cases</li>
+                <li>Measure and articulate impact</li>
+            </ul>
+        </div>
+
+        <div class="roadmap-item">
+            <h3>Month 4 – Scale or Second Project</h3>
+            <ul>
+                <li>Expand scope and impact <strong>or</strong></li>
+                <li>Begin a second, complementary project</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Impact Section -->
+    <section>
+        <h2>What "Impact" Means</h2>
+        <p>Impact does <strong>not</strong> mean a school club or a simple demo.</p>
+        
+        <p>Impact means:</p>
+        <ul>
+            <li>Real users</li>
+            <li>Real problems</li>
+            <li>Measurable outcomes (e.g., users, usage, adoption, results)</li>
+        </ul>
+
+        <div class="highlight">
+            <p>"I built something that people actually use."</p>
+        </div>
+
+        <p>This allows students to clearly articulate their impact in applications.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Logistics -->
+    <section>
+        <h2>Logistics</h2>
+        
+        <div class="simple-grid">
+            <div class="simple-item">
+                <h4>Weekly Sessions</h4>
+                <p>60-minute 1-on-1 mentorship</p>
+            </div>
+            <div class="simple-item">
+                <h4>Async Support</h4>
+                <p>Support between sessions</p>
+            </div>
+            <div class="simple-item">
+                <h4>Commitment</h4>
+                <p>4-month minimum</p>
+            </div>
+            <div class="simple-item">
+                <h4>Exclusive</h4>
+                <p>Limited number of students</p>
+            </div>
+            <div class="simple-item">
+                <h4>Pricing</h4>
+                <p>Shared privately</p>
+            </div>
+        </div>
+
+        <p style="text-align: center; margin-top: 50px; color: var(--warm-light);">If this sounds like a good fit, I'm happy to have a short conversation.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Ready to Get Started?</h2>
+        <p style="color: var(--warm-light); max-width: 600px; margin: 0 auto;">Let's have a conversation about how we can help your student build something remarkable.</p>
+        <div class="contact-methods">
+            <div class="contact-box">
+                <h3>Text Message</h3>
+                <a href="sms:+17329790461">+1 732-979-0461</a>
+            </div>
+            <div class="contact-box">
+                <h3>Email</h3>
+                <a href="mailto:baruahs@umich.edu">baruahs@umich.edu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Shaurya Baruah · CS Project Mentorship for High-Achieving Students</p>
+    </footer>
+</body>
+</html>
