@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Examples - CS Mentorship</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --warm-bg: #FFF8F0;
+            --warm-accent: #D97757;
+            --warm-text: #4A3F35;
+            --warm-light: #8B7B6B;
+            --divider: #E8D5C4;
+            --warm-green: #7AA874;
+            --warm-blue: #6B8DB8;
+            --warm-purple: #9B7BA8;
+        }
+
+        body {
+            font-family: 'Crimson Pro', Georgia, serif;
+            color: var(--warm-text);
+            line-height: 1.8;
+            background: var(--warm-bg);
+            font-size: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* Header */
+        .header {
+            padding: 50px 30px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--warm-text);
+            letter-spacing: -0.5px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: var(--warm-light);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--warm-accent);
+            text-decoration: none;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #C46849;
+        }
+
+        .back-link::before {
+            content: '← ';
+        }
+
+        /* Section */
+        section {
+            padding: 20px 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: var(--warm-text);
+            letter-spacing: -0.5px;
+        }
+
+        section h3 {
+            font-size: 1.5rem;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: var(--warm-accent);
+        }
+
+        section p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        section ul {
+            margin: 20px 0 20px 30px;
+            line-height: 2;
+        }
+
+        section ul li {
+            margin-bottom: 10px;
+        }
+
+        .category-tag {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            padding: 4px 12px;
+            background: rgba(217, 119, 87, 0.15);
+            color: var(--warm-accent);
+            border-radius: 12px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        /* Project Card */
+        .project-card {
+            background: white;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 12px;
+            border: 1px solid var(--divider);
+            position: relative;
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .project-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background: var(--warm-accent);
+            color: white;
+            border-radius: 50%;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            flex-shrink: 0;
+        }
+
+        .example-box {
+            background: rgba(217, 119, 87, 0.05);
+            padding: 20px 25px;
+            margin: 20px 0;
+            border-left: 3px solid var(--warm-accent);
+            border-radius: 4px;
+        }
+
+        .example-box h4 {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            color: var(--warm-text);
+            font-weight: 600;
+        }
+
+        .example-box ul {
+            margin: 10px 0 10px 25px;
+            font-size: 0.95rem;
+        }
+
+        .example-box ul li {
+            margin-bottom: 8px;
+            color: var(--warm-light);
+        }
+
+        .strength-box {
+            background: rgba(122, 168, 116, 0.1);
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+
+        .strength-box strong {
+            color: var(--warm-green);
+            font-weight: 600;
+        }
+
+        /* Visual Demo */
+        .visual-demo {
+            margin: 25px 0;
+            padding: 25px;
+            background: linear-gradient(135deg, #f5f5f0 0%, #fafaf8 100%);
+            border-radius: 8px;
+            border: 1px solid var(--divider);
+        }
+
+        .demo-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--warm-light);
+            margin-bottom: 12px;
+        }
+
+        .mockup-dashboard {
+            background: white;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid var(--divider);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .mockup-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 15px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--divider);
+        }
+
+        .mockup-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--warm-accent);
+        }
+
+        .mockup-bar {
+            height: 12px;
+            background: linear-gradient(90deg, var(--warm-accent) 0%, var(--warm-green) 100%);
+            border-radius: 6px;
+            margin: 8px 0;
+        }
+
+        .mockup-bar.short {
+            width: 60%;
+        }
+
+        .mockup-bar.medium {
+            width: 80%;
+        }
+
+        .mockup-card {
+            background: var(--warm-bg);
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: var(--warm-light);
+        }
+
+        /* Divider */
+        .divider {
+            height: 1px;
+            background: var(--divider);
+            margin: 25px auto;
+            max-width: 200px;
+        }
+
+        /* Highlight */
+        .highlight {
+            border-left: 3px solid var(--warm-accent);
+            padding-left: 30px;
+            margin: 25px 0;
+            font-style: italic;
+            color: var(--warm-light);
+        }
+
+        .outcome-box {
+            background: linear-gradient(135deg, rgba(217, 119, 87, 0.1), rgba(155, 123, 168, 0.1));
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid rgba(217, 119, 87, 0.2);
+        }
+
+        .outcome-box h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: var(--warm-accent);
+        }
+
+        .outcome-box p {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px 30px;
+            color: var(--warm-light);
+            font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            section h2 {
+                font-size: 1.6rem;
+            }
+
+            section h3 {
+                font-size: 1.3rem;
+            }
+
+            body {
+                font-size: 18px;
+            }
+
+            .project-card {
+                padding: 20px;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="back-link">Back to Main Page</a>
+            <h1>Example CS Projects</h1>
+            <p>The goal of each project is to build something real, technically meaningful, and used by actual people. Projects are tailored to each student's interests and access.</p>
+        </div>
+    </header>
+
+    <div class="divider"></div>
+
+    <!-- Project Category 1 -->
+    <section>
+        <div class="project-card">
+            <h3><span class="project-number">1</span>Internal Tools for Real Organizations</h3>
+            <span class="category-tag">Very high signal for colleges</span>
+            
+            <p>Students build software used by a real group such as a nonprofit, club, or small business.</p>
+
+            <div class="example-box">
+                <h4>Examples:</h4>
+                <ul>
+                    <li>Volunteer scheduling and attendance system for a local nonprofit</li>
+                    <li>Member management dashboard for a school club or community organization</li>
+                    <li>Inventory or order-tracking tool for a small business</li>
+                    <li>Event coordination platform for a student organization</li>
+                </ul>
+            </div>
+
+            <div class="visual-demo">
+                <div class="demo-label">Example Dashboard Interface</div>
+                <div class="mockup-dashboard">
+                    <div class="mockup-header">
+                        <div class="mockup-dot"></div>
+                        <div class="mockup-dot"></div>
+                        <div class="mockup-dot"></div>
+                    </div>
+                    <div class="mockup-card">📊 Active Members: 45</div>
+                    <div class="mockup-bar short"></div>
+                    <div class="mockup-card">📅 Upcoming Events: 3</div>
+                    <div class="mockup-bar medium"></div>
+                    <div class="mockup-card">✅ Attendance Rate: 87%</div>
+                </div>
+            </div>
+
+            <div class="strength-box">
+                <strong>Why this is strong:</strong> Real stakeholders, real constraints, measurable usage.
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Category 2 -->
+    <section>
+        <div class="project-card">
+            <h3><span class="project-number">2</span>Data & Analytics Platforms</h3>
+            <span class="category-tag">Strong CS depth + problem-solving</span>
+            
+            <p>Students collect, process, and analyze real data to generate insights.</p>
+
+            <div class="example-box">
+                <h4>Examples:</h4>
+                <ul>
+                    <li>Sports analytics dashboard for a school team</li>
+                    <li>Public safety or traffic incident visualization tool</li>
+                    <li>College admissions or education outcomes data explorer</li>
+                    <li>Environmental data tracker (air quality, noise, temperature, etc.)</li>
+                </ul>
+            </div>
+
+            <div class="visual-demo">
+                <div class="demo-label">Example Data Visualization</div>
+                <div class="mockup-dashboard">
+                    <div class="mockup-header">
+                        <div class="mockup-dot"></div>
+                        <div class="mockup-dot"></div>
+                        <div class="mockup-dot"></div>
+                    </div>
+                    <div class="mockup-card">📈 Data Points: 1,247</div>
+                    <div class="mockup-bar"></div>
+                    <div class="mockup-bar medium"></div>
+                    <div class="mockup-bar short"></div>
+                    <div class="mockup-card">🔍 Insights Generated: 8</div>
+                </div>
+            </div>
+
+            <div class="strength-box">
+                <strong>Technical focus:</strong> APIs, data pipelines, visualization, performance, edge cases.
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Category 3 -->
+    <section>
+        <div class="project-card">
+            <h3><span class="project-number">3</span>Automation & Productivity Systems</h3>
+            <span class="category-tag">Great for practical, systems-oriented students</span>
+            
+            <p>Students design tools that save time or reduce manual work.</p>
+
+            <div class="example-box">
+                <h4>Examples:</h4>
+                <ul>
+                    <li>Automated scheduling and reminder system</li>
+                    <li>Application or internship tracker with analytics</li>
+                    <li>Workflow automation for teachers or administrators</li>
+                    <li>Study or workload planning system based on constraints</li>
+                </ul>
+            </div>
+
+            <div class="strength-box">
+                <strong>Why this works:</strong> Clear problem → clear improvement → easy to explain impact.
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Category 4 -->
+    <section>
+        <div class="project-card">
+            <h3><span class="project-number">4</span>Community-Focused Platforms</h3>
+            <span class="category-tag">Impact + leadership + ownership</span>
+            
+            <p>Projects built for a specific, real community rather than "everyone."</p>
+
+            <div class="example-box">
+                <h4>Examples:</h4>
+                <ul>
+                    <li>Peer tutoring coordination platform</li>
+                    <li>Resource-sharing tool for students at a school</li>
+                    <li>Event discovery and attendance tracking for a community group</li>
+                    <li>Opportunity aggregator for internships, volunteering, or programs</li>
+                </ul>
+            </div>
+
+            <div class="strength-box">
+                <strong>Key rule:</strong> Start narrow. One real community > generic scale.
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Category 5 -->
+    <section>
+        <div class="project-card">
+            <h3><span class="project-number">5</span>Health, Safety, or Accessibility Tools</h3>
+            <span class="category-tag">Extremely strong when done thoughtfully</span>
+            
+            <p>Even smaller-scale projects here carry outsized impact.</p>
+
+            <div class="example-box">
+                <h4>Examples:</h4>
+                <ul>
+                    <li>Medication reminder and adherence tracking system</li>
+                    <li>Emergency contact and response coordination tool</li>
+                    <li>Accessibility support tool (e.g., visual, mobility, or cognitive aids)</li>
+                    <li>Health data logging and visualization platform</li>
+                </ul>
+            </div>
+
+            <div class="strength-box">
+                <strong>Why colleges care:</strong> Purpose + technical execution + real-world relevance.
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Applied Projects Section -->
+    <section>
+        <h2>Applied & Interdisciplinary Projects</h2>
+        <p style="color: var(--warm-light); margin-bottom: 25px;">For students interested in neuroscience, biology, math, or science-heavy fields</p>
+        
+        <p>These projects use computer science as a tool to explore another domain. They're especially strong for students considering STEM majors beyond pure CS.</p>
+
+        <h3>Neuroscience & Cognitive Science</h3>
+        <p style="color: var(--warm-light); font-size: 0.95rem;">Projects focused on data, modeling, or systems related to the brain and behavior.</p>
+        
+        <div class="example-box">
+            <h4>Examples:</h4>
+            <ul>
+                <li>Reaction-time or attention-testing platform with data analysis</li>
+                <li>EEG or neuroscience dataset analysis and visualization</li>
+                <li>Cognitive task performance tracker with statistical insights</li>
+                <li>Brain–behavior simulation or modeling tool (simplified but rigorous)</li>
+            </ul>
+        </div>
+        
+        <div class="strength-box">
+            <strong>Why this is strong:</strong> Demonstrates technical skill and scientific curiosity.
+        </div>
+
+        <h3>Biology & Health</h3>
+        <p style="color: var(--warm-light); font-size: 0.95rem;">Projects applying CS to biological or health-related questions.</p>
+        
+        <div class="example-box">
+            <h4>Examples:</h4>
+            <ul>
+                <li>Health data logging and analysis tool</li>
+                <li>Disease trend or public health data explorer</li>
+                <li>Bioinformatics-inspired sequence analysis (introductory level)</li>
+                <li>Lab data organization and visualization platform</li>
+            </ul>
+        </div>
+        
+        <div class="strength-box">
+            <strong>Technical focus:</strong> Data processing, modeling, interpretation—not just UI.
+        </div>
+
+        <h3>Mathematics & Applied Math</h3>
+        <p style="color: var(--warm-light); font-size: 0.95rem;">Projects using algorithms, modeling, or simulation.</p>
+        
+        <div class="example-box">
+            <h4>Examples:</h4>
+            <ul>
+                <li>Optimization or scheduling simulation</li>
+                <li>Mathematical modeling of real-world systems</li>
+                <li>Graph theory or network analysis tools</li>
+                <li>Visualizations that explain complex math concepts interactively</li>
+            </ul>
+        </div>
+        
+        <div class="strength-box">
+            <strong>Why colleges like this:</strong> Shows abstract thinking + implementation.
+        </div>
+
+        <h3>Engineering & Physical Sciences</h3>
+        <p style="color: var(--warm-light); font-size: 0.95rem;">Projects grounded in physics, engineering, or systems thinking.</p>
+        
+        <div class="example-box">
+            <h4>Examples:</h4>
+            <ul>
+                <li>Sensor data collection and analysis tool</li>
+                <li>Simulation of physical systems (motion, forces, energy)</li>
+                <li>Optimization tools for engineering constraints</li>
+                <li>Control-system-inspired simulations (simplified)</li>
+            </ul>
+        </div>
+
+        <h3>Economics, Policy, or Social Science</h3>
+        <p style="color: var(--warm-light); font-size: 0.95rem;">Projects analyzing systems that affect people and communities.</p>
+        
+        <div class="example-box">
+            <h4>Examples:</h4>
+            <ul>
+                <li>Economic or demographic data analysis platform</li>
+                <li>Policy impact simulation or visualization tool</li>
+                <li>Resource allocation or inequality modeling system</li>
+                <li>Election or public data explorer</li>
+            </ul>
+        </div>
+
+        <div class="highlight" style="margin-top: 35px;">
+            <p><strong>Why Applied Projects Are Especially Valuable:</strong></p>
+            <p>Applied projects signal intellectual maturity, show interdisciplinary thinking, stand out in essays and interviews, and align naturally with future research interests.</p>
+            <p style="margin-top: 15px;">They help students say: <strong>"I use CS to explore real questions I care about."</strong></p>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- How Projects Are Chosen -->
+    <section>
+        <h2>How Projects Are Chosen</h2>
+        <p>Project ideas are selected based on:</p>
+        <ul>
+            <li>Student interests</li>
+            <li>Existing skill level</li>
+            <li>Access to data or stakeholders</li>
+            <li>Feasibility within a semester</li>
+        </ul>
+        <p>The focus is always on <strong>depth, ownership, and clarity</strong>, not buzzwords.</p>
+    </section>
+
+    <!-- What Makes a Project Strong -->
+    <section>
+        <h2>What Makes a Project "Strong"</h2>
+        <p>Every project is designed to include:</p>
+        <ul>
+            <li>A real user or stakeholder</li>
+            <li>Technical depth beyond surface-level UI</li>
+            <li>Clear student ownership</li>
+            <li>Measurable impact (users, usage, outcomes)</li>
+        </ul>
+    </section>
+
+    <!-- What Students Do Not Build -->
+    <section>
+        <h2>What Students Do Not Build</h2>
+        <ul>
+            <li>Tutorial or "clone" apps</li>
+            <li>Simple to-do lists or basic games</li>
+            <li>Projects with no real users</li>
+            <li>Overly broad "social networks for everyone"</li>
+        </ul>
+        <p><strong>Depth and ownership matter far more than flash.</strong></p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Outcome -->
+    <section>
+        <div class="outcome-box">
+            <h3>Typical Outcome</h3>
+            <p>"I identified a real problem, built a technical solution, shipped it, and had real people use it."</p>
+            <p style="font-size: 1rem; margin-top: 15px; font-style: normal; color: var(--warm-light);">This translates directly into strong resume bullets, application essays, and interview conversations.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><a href="index.html" style="color: var(--warm-accent); text-decoration: none;">← Back to Main Page</a></p>
+        <p style="margin-top: 15px;">© 2026 Shaurya Baruah · CS Project Mentorship</p>
+    </footer>
+</body>
+</html>

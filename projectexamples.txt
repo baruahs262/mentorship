@@ -1,0 +1,245 @@
+Example CS Projects Students May Work On
+
+The goal of each project is to build something real, technically meaningful, and used by actual people. Projects are tailored to each student’s interests and access, but typically fall into the categories below.
+
+1. Internal Tools for Real Organizations
+
+(Very high signal for colleges)
+
+Students build software used by a real group such as a nonprofit, club, or small business.
+
+Examples:
+
+Volunteer scheduling and attendance system for a local nonprofit
+
+Member management dashboard for a school club or community organization
+
+Inventory or order-tracking tool for a small business
+
+Event coordination platform for a student organization
+
+Why this is strong:
+Real stakeholders, real constraints, measurable usage.
+
+2. Data & Analytics Platforms
+
+(Strong CS depth + problem-solving)
+
+Students collect, process, and analyze real data to generate insights.
+
+Examples:
+
+Sports analytics dashboard for a school team
+
+Public safety or traffic incident visualization tool
+
+College admissions or education outcomes data explorer
+
+Environmental data tracker (air quality, noise, temperature, etc.)
+
+Technical focus:
+APIs, data pipelines, visualization, performance, edge cases.
+
+3. Automation & Productivity Systems
+
+(Great for practical, systems-oriented students)
+
+Students design tools that save time or reduce manual work.
+
+Examples:
+
+Automated scheduling and reminder system
+
+Application or internship tracker with analytics
+
+Workflow automation for teachers or administrators
+
+Study or workload planning system based on constraints
+
+Why this works:
+Clear problem → clear improvement → easy to explain impact.
+
+4. Community-Focused Platforms
+
+(Impact + leadership + ownership)
+
+Projects built for a specific, real community rather than “everyone.”
+
+Examples:
+
+Peer tutoring coordination platform
+
+Resource-sharing tool for students at a school
+
+Event discovery and attendance tracking for a community group
+
+Opportunity aggregator for internships, volunteering, or programs
+
+Key rule:
+Start narrow. One real community > generic scale.
+
+5. Health, Safety, or Accessibility Tools
+
+(Extremely strong when done thoughtfully)
+
+Even smaller-scale projects here carry outsized impact.
+
+Examples:
+
+Medication reminder and adherence tracking system
+
+Emergency contact and response coordination tool
+
+Accessibility support tool (e.g., visual, mobility, or cognitive aids)
+
+Health data logging and visualization platform
+
+Why colleges care:
+Purpose + technical execution + real-world relevance.
+
+6. Applied & Interdisciplinary Projects
+
+(For students interested in neuroscience, biology, math, or science-heavy fields)
+
+These projects use computer science as a tool to explore another domain. They’re especially strong for students considering STEM majors beyond pure CS.
+
+Neuroscience & Cognitive Science
+
+Projects focused on data, modeling, or systems related to the brain and behavior.
+
+Examples:
+
+Reaction-time or attention-testing platform with data analysis
+
+EEG or neuroscience dataset analysis and visualization
+
+Cognitive task performance tracker with statistical insights
+
+Brain–behavior simulation or modeling tool (simplified but rigorous)
+
+Why this is strong:
+Demonstrates technical skill and scientific curiosity.
+
+Biology & Health
+
+Projects applying CS to biological or health-related questions.
+
+Examples:
+
+Health data logging and analysis tool
+
+Disease trend or public health data explorer
+
+Bioinformatics-inspired sequence analysis (introductory level)
+
+Lab data organization and visualization platform
+
+Technical focus:
+Data processing, modeling, interpretation—not just UI.
+
+Mathematics & Applied Math
+
+Projects using algorithms, modeling, or simulation.
+
+Examples:
+
+Optimization or scheduling simulation
+
+Mathematical modeling of real-world systems
+
+Graph theory or network analysis tools
+
+Visualizations that explain complex math concepts interactively
+
+Why colleges like this:
+Shows abstract thinking + implementation.
+
+Engineering & Physical Sciences
+
+Projects grounded in physics, engineering, or systems thinking.
+
+Examples:
+
+Sensor data collection and analysis tool
+
+Simulation of physical systems (motion, forces, energy)
+
+Optimization tools for engineering constraints
+
+Control-system-inspired simulations (simplified)
+
+Economics, Policy, or Social Science
+
+Projects analyzing systems that affect people and communities.
+
+Examples:
+
+Economic or demographic data analysis platform
+
+Policy impact simulation or visualization tool
+
+Resource allocation or inequality modeling system
+
+Election or public data explorer
+
+Why Applied Projects Are Especially Valuable
+
+Applied projects:
+
+Signal intellectual maturity
+
+Show interdisciplinary thinking
+
+Stand out in essays and interviews
+
+Align naturally with future research interests
+
+They help students say:
+
+“I use CS to explore real questions I care about.”
+
+How Projects Are Chosen
+
+Project ideas are selected based on:
+
+Student interests
+
+Existing skill level
+
+Access to data or stakeholders
+
+Feasibility within a semester
+
+The focus is always on depth, ownership, and clarity, not buzzwords.
+
+What Makes a Project “Strong”
+
+Every project is designed to include:
+
+A real user or stakeholder
+
+Technical depth beyond surface-level UI
+
+Clear student ownership
+
+Measurable impact (users, usage, outcomes)
+
+What Students Do Not Build
+
+Tutorial or “clone” apps
+
+Simple to-do lists or basic games
+
+Projects with no real users
+
+Overly broad “social networks for everyone”
+
+Depth and ownership matter far more than flash.
+
+Typical Outcome
+
+By the end of the mentorship, students can clearly say:
+
+“I identified a real problem, built a technical solution, shipped it, and had real people use it.”
+
+This translates directly into strong resume bullets, application essays, and interview conversations.
